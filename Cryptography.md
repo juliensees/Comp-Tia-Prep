@@ -32,5 +32,15 @@ Encryption
             - ex. relaying a key verbally or sending it in the mail  
                 - has the possibility of infiltration/comprimised
              
-      
+  - PKI and Certificates  
+      - PKI (Public Key Infrastructure)  
+            - public key infrastructure ensures a public key belongs to only one organization  
+              - ISSUED BY A CA (Certificate Authority)  
+              - OR SELF-SIGNED BY YOUR ORGANIZATION ----- WON'T GO OUT ONTO THE INTERNET  
+          - CA will check if key pair is unique, and assigns a key pair for a length of time  
+               - maintains records of assigned certificates  
+               - trusted because authority was granted by another CA in a heirarchy  
+
+        - OCSP (Online Certificate Status Protocol) - allows entity to check status of certificate  
+        - CRL (Certificate Revocation List) - identifies which certificates have been revoked by the                         issuing CA and shouldn't be trusted  
         
