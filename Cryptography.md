@@ -44,3 +44,17 @@ Encryption
         - OCSP (Online Certificate Status Protocol) - allows entity to check status of certificate  
         - CRL (Certificate Revocation List) - identifies which certificates have been revoked by the                         issuing CA and shouldn't be trusted  
         
+### Private keys are used to sign something for NON-REPUDIATION -- GUARANTEEING ORIGINAL CREATOR  
+
+* Cryptographic Tools  
+
+- Key Management - keys should be rotated (in case someone gets a hold of them)  
+- Security Enclave - an are within a phone or computer that has a dedicated security chip that runs its   own micro-operating system (isolated from the main CPU/OS)  
+      - basically like a security booth that authorizes or denies actions that somewhere else carries out  
+- Trusted Platform Module (TPM) - small, purpose-built chip used to identify a specific motherboard
+      - either built into the motherboard or as an add-on peripheral
+      - can protect small amounts of sensitive info, such as passwords/cryptographic keys
+
+- Hardware security module (HSM) - looks more like a graphics card
+      - offloads the computationally intense encryption/decryption workload from the main CPU
+      - it's actually a GPU (graphics processor unit)
