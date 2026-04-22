@@ -39,3 +39,35 @@
             reader
     - Skimming
           - special hardware that is inserted into an ATM or gas pump to steal PIN and card info
+
+### Network and App Attacks
+
+- On-path attack - when an attacker is between two targets communications
+        - formerly "man-in-the-middle"
+
+      - DNS Poisoning - an attack agains the DNS system that resolves a requeset away from legitimate                servers  
+              * DNS IS THE SYSTEM THAT RETURNS AN IP ADDRESS FROM A GIVEN DOMAIN NAME  
+             - Domains that host malware then have a negative reputation
+      
+     - ARP Poisoning - when an attacker changes Address Resolution Protocol (ARP) records in a way that                     resolves the attacker's MAC address to a legitimate IP address
+ 
+- App Attacks
+
+   * Resource exhaustion attacks    
+     - Denial-of-service (DoS)    
+             - where an attacker attempts to make a networked resource unavailable to others by                                disrupting and overwhelming. 
+     - Distributed-Denial-of-Service (DDoS)    
+             - a DoS attack in which multiple computers work together to cause a denial of service. 
+             - the attacking computers are usually compromised by malicious software. 
+     - DNS Amplification attack.  
+             - when an attacker spoofs lookup requests to DNS servers and redirects the response  
+                toward a target. 
+                  - the response is larger than the request, allowing the attacker to amplify efforts
+      - Buffer overflow. 
+              - when a program overruns a buffer's boundary as a result of a too-large input and.                                overwrites adjacent memory locations. 
+                 - memory locations are often well-defined, allowing an attacker to write the overflow.                          code into an executable area of the memory
+                    
+              * can be used to change info and escalate privileges 
+        - Privilege escalation
+                - when an attacker elevates his privileges to gain access to resources he wouldnt have
+                - the ability to elevate the privileges can be caused by a bug or simple oversight
