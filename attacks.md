@@ -49,7 +49,12 @@
               * DNS IS THE SYSTEM THAT RETURNS AN IP ADDRESS FROM A GIVEN DOMAIN NAME  
              - Domains that host malware then have a negative reputation
       
-     - ARP Poisoning - when an attacker changes Address Resolution Protocol (ARP) records in a way that                     resolves the attacker's MAC address to a legitimate IP address
+     - ARP Poisoning - when an attacker changes Address Resolution Protocol (ARP) records in a way that                     resolves the attacker's MAC address to a legitimate IP address, claiming they are
+                   * 1) attacker sends fake ARP messages to victims saying IP "" (the router)
+                      belongs to my MAC address (physical device)
+                     2) victims update their ARP cache with false info
+                     3) now when victim tries to reach router, traffic goes to attacker
+                     4) attacker forwards traffic to real router - victim doesn't realize
  
 - App Attacks
 
@@ -59,15 +64,51 @@
      - Distributed-Denial-of-Service (DDoS)    
              - a DoS attack in which multiple computers work together to cause a denial of service. 
              - the attacking computers are usually compromised by malicious software. 
-     - DNS Amplification attack.  
-             - when an attacker spoofs lookup requests to DNS servers and redirects the response  
-                toward a target. 
+           - DNS Amplification attack.  
+                - when an attacker spoofs lookup requests to DNS servers and redirects the response  
+                   toward a target. 
                   - the response is larger than the request, allowing the attacker to amplify efforts
+                      - the enabler are Open DNS resolvers
+                   * similar to Smurfing, but uses DNS instead of ICMP
+       
       - Buffer overflow. 
               - when a program overruns a buffer's boundary as a result of a too-large input and.                                overwrites adjacent memory locations. 
-                 - memory locations are often well-defined, allowing an attacker to write the overflow.                          code into an executable area of the memory
-                    
-              * can be used to change info and escalate privileges 
-        - Privilege escalation
-                - when an attacker elevates his privileges to gain access to resources he wouldnt have
-                - the ability to elevate the privileges can be caused by a bug or simple oversight
+                 - memory locations are often well-defined, allowing an attacker to write the overflow.                          code into an executable area of the memory. 
+                    * can be used to change info and escalate privileges
+        
+        - Privilege escalation. 
+                - when an attacker elevates his privileges to gain access to resources he wouldnt have  
+                - the ability to elevate the privileges can be caused by a bug or simple oversight. 
+
+### Malware
+
+   - Virus. 
+        - a malicious computer program that attaches to apps or executables and replicates itself. 
+        - can contain a payload which executes when the virus is activated
+    
+   - Worm  
+        - malware that spreads from computer to computer with little to no interaction from user. 
+        - self-contained, no need to attach to other files like a virus. 
+        - rapidly consumes network bandwith due to ease of replication  
+
+   - Trojan. 
+        - malware hidden inside legitimate software. 
+        - because software seems legitimate, it is more likely to be given permissions. 
+    
+   - Backdoor. 
+        - a way to circumvent security features built into sofware/systems. 
+        - backdoors can be created maliciouisly, but could also be made by developers. 
+    
+   - Remote Access Trojan (RAT). 
+        - a specific type of trojan which is used to install a backdoor on a system. 
+        - RAT's typically give the attacker admin level control. 
+             * allowing them to modify files, record keystrokes, and distribute viruses. 
+         
+   - Keyloggers. 
+        - hardware or software that covertly records all keystrokes
+    
+   - Spyware. 
+        - software the collects info about user, system, org without knowledge. 
+        - includes keyloggers and may take screenshots, microphone, or webcam  
+    
+     
