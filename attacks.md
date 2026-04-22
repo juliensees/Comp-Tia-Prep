@@ -111,4 +111,11 @@
         - software the collects info about user, system, org without knowledge. 
         - includes keyloggers and may take screenshots, microphone, or webcam  
     
-     
+   - Logic Bomb.  
+        - usually the work of an insider threat. 
+        - code that is secretly incorporated into legitimate software and is set to execute when a  
+             specific condition is met. 
+          - generally used to commit a malicious action. 
+         *  "if ... delete ..."
+
+   
