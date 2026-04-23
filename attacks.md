@@ -113,9 +113,19 @@
     
    - Logic Bomb.  
         - usually the work of an insider threat. 
-        - code that is secretly incorporated into legitimate software and is set to execute when a  
-             specific condition is met. 
+        - code that is secretly incorporated into legitimate software and is set to execute when             a specific condition is met. 
           - generally used to commit a malicious action. 
          *  "if ... delete ..."
 
-   
+   ### SQL Injection
+      - a SQL injection manipulates database queries through user input
+         - Authentication bypass is a class example "--" from "admin --" says disregard anything
+               after. so if they type "admin' --" in username field, it won't ask for password
+      - an attack that injects a piece of logic into a standard SQL query
+         - ex. SELECT * FROM users WHERE id=2968
+            - so SQL injection works is to tack on to this 1=1
+                SELECT * FROM users WHERE id=2968 OR 1=1' --
+         * "OR 1=1" is a TELL-TALE SIGN IT'S A SQL INJECTION on the TEST!!
+         ** 
+
+         
